@@ -1,9 +1,9 @@
-var movies = [{title:"Magnolia", duration:128, rating:4},
-{title:"Boogie Nights", duration:224, rating:5}];
+var movies = [
+{title:"Magnolia", numYes:0, numNo:0, numOfVotes:0},
+{title:"Boogie Nights", numYes:0, numNo:0, numOfVotes:0}
+];
 
-var numbers = [1,2,3,4,5];
-
-var test;
+var filmChkBox;
 
 window.onload = function(){
 	var filmDiv = document.getElementById("film");
@@ -27,13 +27,14 @@ window.onload = function(){
 
 	var wouldRecommendBtn = document.getElementById("wouldRecommendBtn");
 	wouldRecommendBtn.onclick = function(){
-		test = document.getElementsByClassName("FilmCheckbox");
-		for(var i = 0; i < test.length; i++){
-			if(test[i].checked){
+		filmChkBox = document.getElementsByClassName("FilmCheckbox");
+		for(var i = 0; i < filmChkBox.length; i++){
+			if(filmChkBox[i].checked){
 				for(var j = 0; j <movies.length; j++){
-					if(test[i].value == movies[j].title){
-						movies[j].rating++;
-						window.alert(movies[j].title + ": " + movies[j].rating);
+					if(filmChkBox[i].value == movies[j].title){
+						movies[j].numYes++;
+						movies[j].numOfVotes++;
+						window.alert(Math.round((movies[j].numYes / movies[j].numOfVotes)*100) + "% of people would recommend " + movies[j].title);
 					}
 				}
 			}
@@ -41,13 +42,14 @@ window.onload = function(){
 	}
 	var nahBtn = document.getElementById("nahBtn");
 	nahBtn.onclick = function(){
-		test = document.getElementsByClassName("FilmCheckbox");
-		for(var i = 0; i < test.length; i++){
-			if(test[i].checked){
+		filmChkBox = document.getElementsByClassName("FilmCheckbox");
+		for(var i = 0; i < filmChkBox.length; i++){
+			if(filmChkBox[i].checked){
 				for(var j = 0; j <movies.length; j++){
-					if(test[i].value == movies[j].title){
-						movies[j].rating--;
-						window.alert(movies[j].title + ": " + movies[j].rating);
+					if(filmChkBox[i].value == movies[j].title){
+						movies[j].numNo++;
+						movies[j].numOfVotes++;
+						window.alert(Math.round((movies[j].numYes / movies[j].numOfVotes)*100) + "% of people would recommend " + movies[j].title);
 					}
 				}
 			}
