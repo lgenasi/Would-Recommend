@@ -5,24 +5,18 @@
 	<title>WouldRecommend</title>
     <link rel="icon" 
     type="image/png" 
-    href="assets/img/favicon.png"> <!--change this-->
+    href="assets/img/favicon.png">
     <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="lib/bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="src/test.js"></script>
-
-    <!--<script type="text/javascript" src="js/settings.js"></script> 
-    <script type="text/javascript" src="js/stat-handler.js"></script> 
-    <script type="text/javascript" src="js/ui-handler.js"></script> 
-    <script type="text/javascript" src="js/bingo-creator.js"></script>
-    <script type="text/javascript" src="js/controller.js"></script>-->
+    <script type="text/javascript" src="src/ui.js"></script>
+    <script type="text/javascript" src="src/main.js"></script>
 
     <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.0-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.0-dist/css/bootstrap-theme.min.css" />
 
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!--"user-scalable=no" no pinch zoom on phone (mobile mode)-->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
 <body>
@@ -31,21 +25,21 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="form-group">
-                 <div class="input-group">
-                     <input class="form-control" type="text" placeholder="Search for a film"/>
-                     <div class="input-group-addon">GO</div>
-                 </div>
-             </div>
-         </div>
-     </div>
+                   <div class="input-group">
+                       <input class="form-control" type="text" placeholder="Search for a film"/>
+                       <div class="input-group-addon">GO</div>
+                   </div>
+               </div>
+           </div>
+       </div>
 
-     <div class="row">
-     <div id="film" class="col-md-6 col-md-offset-3">
-         </div>
-     </div>
+       <div class="row">
+           <div id="film" class="col-md-6 col-md-offset-3">
+           </div>
+       </div>
 
 
-     <div class="row">
+       <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <button id="wouldRecommendBtn" type="button" class="btn btn-success button-size">Would Recommend</button>
             <button id="nahBtn" type="button" class="btn btn-danger button-size">Nah</button>
