@@ -9,29 +9,18 @@ var port = pkg.port;
 var dataFile = pkg.dataFile;
 
 var exec = require('child_process').exec;
-var WebSocketServer = require('ws').Server;
-
-var clients = [];
 
 var app = express();
+app.use("/src", express.static(__dirname + '/src'));
+app.use("/lib", express.static(__dirname + '/lib'));
 var server = http.createServer(app);
-app.use(cookieParser());
-app.use(expressSession({secret:'glossary-da-best'}));
-
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
-app.use(express.static(__dirname + '/public'));
 
 app.set('port', (port));
 app.get(route, function (req, res) {
-  res.render('main', {title: pkg.name, debug: pkg.debug});
+  res.sendfile('test.html');
 });
 
-var wss = new WebSocketServer({server: server});
-wss.broadcast = function(data, ws) {
-  for (var i in this.clients) {
-    if (this.clients[i] !== ws) {
-      this.clients[i].send(data);
-    }
-  }
-};
+
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+});

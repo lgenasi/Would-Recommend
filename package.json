@@ -1,35 +1,35 @@
 {
-  "name": "Would-Recommend",
-  "version": "0.0.1",
-  "description": "Yeah, and stuff",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "express": "*",
-    "http": "*",
-    "ws": "*",
-    "cookie-parser": "*",
-    "express-session": "*",
-    "jade": "*",
-    "nodeunit": "*",
-    "jsdoc": "*",
-  },
-  "engines": {
-    "node": "*",
-    "npm": "*"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lgenasi/Would-Recommend.git"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "debug": false,
-  "route": "/",
-  "port": "5000",
+	"name": "Would-Recommend",
+	"version": "0.0.1",
+	"description": "Yeah, and stuff",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"dependencies": {
+		"express": "*",
+		"http": "*",
+		"ws": "*",
+		"cookie-parser": "*",
+		"express-session": "*",
+		"jade": "*",
+		"nodeunit": "*",
+		"jsdoc": "*"
+	},
+	"engines": {
+		"node": "*",
+		"npm": "*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lgenasi/Would-Recommend.git"
+	},
+	"keywords": [
+		"node",
+		"heroku",
+		"express"
+	],
+	"debug": false,
+	"route": "/",
+	"port": "5000"
 }
