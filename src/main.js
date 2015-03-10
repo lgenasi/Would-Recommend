@@ -1,5 +1,6 @@
 window.onload = function(){
 	var filmDiv = document.getElementById("film");
+	var img = document.getElementById("img");
 
 	for (var i = 0; i < movies.length; i++){
 		var br = document.createElement('br');
