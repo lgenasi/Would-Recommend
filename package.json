@@ -15,14 +15,6 @@
     "jade": "*",
     "nodeunit": "*",
     "jsdoc": "*",
-    "winston": "*",
-    "grunt": "*",
-    "grunt-cli": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-nodeunit": "*",
-    "grunt-jsdoc": "*"
   },
   "engines": {
     "node": "*",
