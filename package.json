@@ -1,7 +1,7 @@
 {
-  "name": "Glossary",
-  "version": "0.0.2",
-  "description": "Allows you to maintain a custom glossary.",
+  "name": "Would-Recommend",
+  "version": "0.0.1",
+  "description": "Yeah, and stuff",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -40,7 +40,4 @@
   "debug": false,
   "route": "/",
   "port": "5000",
-  "devDependencies": {
-    "grunt": "^0.4.5"
-  }
 }
