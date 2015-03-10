@@ -1,6 +1,5 @@
 window.onload = function(){
 	var filmDiv = document.getElementById("film");
-	var img = document.getElementById("img");
 
 	for (var i = 0; i < movies.length; i++){
 		var br = document.createElement('br');
@@ -22,3 +21,12 @@ window.onload = function(){
 	bindControls();
 };
 
+function search(criteria){
+	var imgPath = "";
+	for(var i = 0; i < movies.length; i++){
+		if (criteria == movies[i].title){
+			imgPath = movies[i].image;
+		}
+	} 
+	return imgPath;
+}

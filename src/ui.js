@@ -1,19 +1,25 @@
-function bindControls(){
+function homePageSearch(criteria){
 	var searchBtn = document.getElementById("searchBtn");
+	var searchBox = document.getElementById("searchCriteria");
+	var img = document.getElementById("img");
+
+	var imgPath = search(searchBox.value);
+
+	if(imgPath == ""){
+		img.src = "http://wiki.ggpsystems.co.uk/images/Dickbutt.jpg";
+	} else{
+		img.src = imgPath;
+	}
+}
+
+function bindControls(){
 	searchBtn.onclick = function(){
-		var filmChkBox = document.getElementsByClassName("FilmCheckbox");
-		var found = false;
-		for(var i = 0; i < filmChkBox.length; i++){
-			if(filmChkBox[i].checked){
-				for(var j = 0; j <movies.length; j++){
-					if(filmChkBox[i].value == movies[j].title){
-						img.src = movies[j].image;
-						found = true;
-					}
-				}
-			} 
-		} if(!found){
-			img.src = "http://wiki.ggpsystems.co.uk/images/Dickbutt.jpg";
+		homePageSearch(searchBox.value);
+	}
+
+	searchBox.onkeyup = function(event){
+		if (event.keyCode == 13){
+			homePageSearch(searchBox.value);
 		}
 	}
 
