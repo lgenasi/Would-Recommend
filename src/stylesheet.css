@@ -10,3 +10,8 @@ body{
 	height: 100px;
 	width: 250px;
 }
+
+.search-button-size{
+	height: 46px;
+	width: 75px;
+}

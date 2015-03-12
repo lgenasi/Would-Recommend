@@ -3,11 +3,11 @@
 <head>
 	<meta charset='utf-8' />
 	<title>WouldRecommend</title>
-    <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="lib/bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="src/movies.js"></script>
-    <script type="text/javascript" src="src/ui.js"></script>
-    <script type="text/javascript" src="src/main.js"></script>
+  <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="src/movies.js"></script>
+  <script type="text/javascript" src="src/ui.js"></script>
+  <script type="text/javascript" src="src/main.js"></script>
 
   <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.0-dist/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.0-dist/css/bootstrap-theme.min.css" />
@@ -18,27 +18,29 @@
 </head>
 
 <body>
-    <div class="container">
+  <div class="container">
 
-            <div class="col-md-6 col-md-offset-3">
-                <div id="searchBox" class="input-group">
-                    <input id="searchCriteria" type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                        <button id="searchBtn" type="button" class="btn btn-default">Search</button>
-                    </span>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-md-offset-3">
-            <br>
-                <button id="wouldRecommendBtn" type="button" class="btn btn-success button-size">Would Recommend</button>
-                <button id="nahBtn" type="button" class="btn btn-danger button-size">Nah</button>
-            </div>
-
-        <div id="dialog" title="Basic dialog" class="col-md-6 col-md-offset-4">
-          <br>
-          <img id="img" src="" />
+    <div class = "row">
+      <div class="col-lg-7 col-md-offset-2">
+        <div id="searchBox" class="input-group-lg">
+          <input id="searchCriteria" type="text" class="form-control" placeholder="Search for...">
+        </div>
       </div>
+      <span class="input-group-btn">
+      <button id="searchBtn" type="button" class="btn btn-default search-button-size">Search</button>
+      </span>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3">
+      <br>
+      <button id="wouldRecommendBtn" type="button" class="btn btn-success button-size">Would Recommend</button>
+      <button id="nahBtn" type="button" class="btn btn-danger button-size">Nah</button>
+    </div>
+
+    <div id="dialog" title="Basic dialog" class="col-md-6 col-md-offset-4">
+      <br>
+      <img id="img" src="" />
+    </div>
 
   </div>
 
