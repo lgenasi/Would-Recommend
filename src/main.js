@@ -1,5 +1,5 @@
 window.onload = function(){
-	var filmDiv = document.getElementById("film");
+	/*var filmDiv = document.getElementById("film");
 
 	for (var i = 0; i < movies.length; i++){
 		var br = document.createElement('br');
@@ -16,7 +16,7 @@ window.onload = function(){
 		filmDiv.appendChild(checkbox);
 		filmDiv.appendChild(span);
 		filmDiv.appendChild(br);
-	}
+	} */
 
 	bindControls();
 };
