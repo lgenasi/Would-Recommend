@@ -24,7 +24,7 @@ window.onload = function(){
 function search(criteria){
 	var imgPath = "";
 	for(var i = 0; i < movies.length; i++){
-		if (criteria == movies[i].title){
+		if (criteria.toUpperCase() === movies[i].title.toUpperCase()){
 			imgPath = movies[i].image;
 		}
 	} 
