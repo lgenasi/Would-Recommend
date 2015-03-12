@@ -2,15 +2,19 @@ function homePageSearch(criteria){
 	var searchBtn = document.getElementById("searchBtn");
 	var searchBox = document.getElementById("searchCriteria");
 	var img = document.getElementById("img");
+	var buttons = document.getElementById("buttons");
 
 	var imgPath = search(searchBox.value);
 
 	if(imgPath == ""){
+		buttons.style.cssText="display:none;";
 		img.src = "http://wiki.ggpsystems.co.uk/images/Dickbutt.jpg";
 	} else{
+		buttons.style.cssText="";
 		img.src = imgPath;
 	}
-}
+
+	}
 
 function bindControls(){
 	searchBtn.onclick = function(){
