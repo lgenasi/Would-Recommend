@@ -12,7 +12,25 @@ body{
 	width: 250px;
 }
 
-.search-button-size{
-	height: 46px;
-	width: 75px;
+.outer {
+  text-align: center;
+}
+
+.inner {
+  display: inline-block;
+}
+
+#mainHeader{
+	margin-top: 50px;
+	margin-bottom: 100px;
+	font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	font-size: 128px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.3999996185303px;
+}
+
+#searchBox{
+	margin-bottom: 50px;
 }
