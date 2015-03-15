@@ -1,18 +1,20 @@
+var foundMovie;
+
 function homePageSearch(criteria){
-	var searchBtn = document.getElementById("searchBtn");
-	var searchBox = document.getElementById("searchCriteria");
-	var img = document.getElementById("img");
-	var buttons = document.getElementById("buttons");
+    var searchBtn = document.getElementById("searchBtn");
+    var searchBox = document.getElementById("searchCriteria");
+    var img = document.getElementById("img");
+    var buttons = document.getElementById("buttons");
 
-	var imgPath = search(searchBox.value);
+    foundMovie = search(searchBox.value);
 
-	if(imgPath == ""){
-		buttons.style.cssText="display:none;";
-		//img.src = "http://wiki.ggpsystems.co.uk/images/Dickbutt.jpg";
-	} else{
-		buttons.style.cssText="";
-		img.src = imgPath;
-	}
+    if(foundMovie){
+        buttons.style.cssText="";
+        img.src = foundMovie.image;
+    } else{
+        buttons.style.cssText="display:none;";
+        img.src = "http://wiki.ggpsystems.co.uk/images/Dickbutt.jpg";
+    }
 }
 
 function bindControls(){
@@ -43,37 +45,14 @@ function bindControls(){
     	document.body.style.backgroundColor = "rgb(" + imgData.data[0] + "," + imgData.data[1] + "," + imgData.data[2] + ")";
     }
 
-
-    var wouldRecommendBtn = document.getElementById("wouldRecommendBtn");
     wouldRecommendBtn.onclick = function(){
-    	var filmChkBox = document.getElementsByClassName("FilmCheckbox");
-    	for(var i = 0; i < filmChkBox.length; i++){
-    		if(filmChkBox[i].checked){
-    			for(var j = 0; j <movies.length; j++){
-    				if(filmChkBox[i].value == movies[j].title){
-    					movies[j].numYes++;
-    					movies[j].numOfVotes++;
-    					window.alert(Math.round((movies[j].numYes / movies[j].numOfVotes)*100) + "% of people would recommend " + movies[j].title);
-    				}
-    			}
-    		}
-    	}
+        foundMovie.wouldRecommend(true);
+        window.alert(Math.round((foundMovie.numYes / foundMovie.numOfVotes)*100) + "% of people would recommend " + foundMovie.title);
     }
 
-    var nahBtn = document.getElementById("nahBtn");
     nahBtn.onclick = function(){
-    	var filmChkBox = document.getElementsByClassName("FilmCheckbox");
-    	for(var i = 0; i < filmChkBox.length; i++){
-    		if(filmChkBox[i].checked){
-    			for(var j = 0; j <movies.length; j++){
-    				if(filmChkBox[i].value == movies[j].title){
-    					movies[j].numNo++;
-    					movies[j].numOfVotes++;
-    					window.alert(Math.round((movies[j].numYes / movies[j].numOfVotes)*100) + "% of people would recommend " + movies[j].title);
-    				}
-    			}
-    		}
-    	}
+        foundMovie.wouldRecommend(false);
+        window.alert(Math.round((foundMovie.numYes / foundMovie.numOfVotes)*100) + "% of people would recommend " + foundMovie.title);
     }
 }
 }
